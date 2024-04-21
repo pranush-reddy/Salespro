@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  background-color:#E7E9EB;
+}
+a{
+    font-size: 50px;
+    display: inline-block;
+}
+a::after {
+  content: '';
+  width: 0px;
+  height: 1px;
+  display: block;
+  background: black;
+  transition: 300ms;
+}
+a:hover::after {
+  width: 100%;
+}
+
+</style>
+</head>
+<body>
+    <span class="un"> Underlined Text - Or to be underlined </span>
+</body>
+</html>
