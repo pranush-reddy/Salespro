@@ -37,7 +37,7 @@
             background-color: #04080F;
             /* background-image: linear-gradient(to right, rgb(203, 129, 65), rgb(184, 93, 13)); */
             background-image: linear-gradient(to right,rgb(35, 6, 48),rgb(63, 9, 63));
-            margin-bottom: 50px;
+            
             justify-content: space-between;
             padding-top: 10px;    
         }
@@ -60,9 +60,10 @@
             color: white;
             text-decoration: none;
             margin: 5px 10px 0px 10px;
-            padding: 25px 20px 20px 20px ;
-            font-size: 20px;
+            padding: 25px 18px 20px 20px ;
+            font-size: 17px;
             font-weight: 400;
+            font-family: "sora",sans-serif;
 
         }
         .sales{
@@ -73,14 +74,14 @@
             height: 100px;
             mix-blend-mode:difference;
         }
-        a {
+        a{
             position: relative;}
 
         a::after {
             content: '';
             position: absolute;
             left: 15px;
-            bottom: 22px; /* Adjust to match the thickness of the underline */
+            bottom: 25px; /* Adjust to match the thickness of the underline */
             width: 0;
             height: 1.3px; /* Adjust the thickness of the underline */
             background-color: white; /* Color of the underline */
@@ -168,10 +169,26 @@
             font-weight: 530;
             font-family: "sora",sans-serif;
             }
-        
-        
-        
-        
+            .intro{
+                display:inline-flex;
+                width: max-content;
+                margin-left: -30px;
+                padding-top: 50px;
+            }
+            #scnd{
+                display: inline-flex;
+                width: max-content;
+            }
+            button{
+                width: 220px;
+                height: 50px;
+                border-radius: 17px;
+                color: white;
+                font-size: 23px;
+                background-image: linear-gradient(to right ,rgb(53, 9, 56),purple);
+                margin-top: 20px;
+                cursor: pointer;
+            }
         /* #wel , .introduction{
             
             animation-name:maintitle ;
@@ -258,6 +275,7 @@
         }
         .intro h4{
             margin-left: 80px;
+            width: max-content;
             font-size: 80px;
             color: #04080F;
             font-family: "Sora", sans-serif;
@@ -267,12 +285,11 @@
         }
         #slogan{
             color: #04080F;
-            border: 2px solid black;
             width:max-content;
             padding: 30px;
             border-radius: 8px;
             margin-top: 20px;
-            margin-left: 100px;
+            margin-left: 50px;
             animation-name: slide;
             animation-duration: 1.3s;
             animation-direction:alternate;
@@ -280,9 +297,9 @@
         }
         #slogan h3{
             color: #04080F;
-            font-size: 40px;
+            font-size: 30px;
             font-family: "Noto Sans", sans-serif;
-            text-align: center;
+            
         }
         @keyframes slide {
             from{
@@ -292,6 +309,12 @@
                 transform: translateX(0);
             }
         }
+        span#arrow{
+            color: white;
+            font-size: 25px;
+            font-weight: 600;
+            font-family: "sora",sans-serif;
+        }
         </style>
 </head>
 <body class="roboto-light">
@@ -299,22 +322,29 @@
         <nav>
             <img class="sales"src="Untitled.png" width="320px" height="300px">
             <ul>
-                <li><a class="active" href="">Home</a></li>
+                <li><a class="active" href="" >Home</a></li>
                 <li><a href="ot.html">Tool</a></li>
-                <li><a href="form.html">Feedback</a></li>
+                <li><a href="">Feedback</a></li>
                 <li><a href="">About us</a></li>
 
             </ul>
         </nav>
     </header>
     <div class="intro">
+        <div id="frst">
         <h4>Welcome to <br><span>
         SalsesPro Insight!</span></h4>
         <div id="slogan">
-            <h3>"An Advanced Machine learning technique<br> to achieve your Business needs"<br>
+            <h3>An Advanced Machine learning technique<br> to achieve your Business needs.<br>
             <span>-salespro</span></h3>
+            <button onclick="openTool()">Launch Tool <span id="arrow">↗</span></button>
+        </div></div>
+        <div id="scnd">
+            <img src="statistical-data-analysis-5553431-4639135.webp"> 
         </div>
+        
     </div>
+    
     <main>
     <h2>→Why only SalesPro :</h2>
     <hr/>
@@ -341,12 +371,18 @@
         <div id="foot">
         <a id="ft" href="#">Home</a>
         <a id="ft" href="ot.html">Tool</a>
-        <a id="ft" href="form.html">Feedback</a>
+        <a id="ft" href="#">Feedback</a>
         <a id="ft" href="#">About us</a></div>
         <p>
         Copyright © 2024.inc All Rights Reserved.<br>
         SalesPro
     </p>
         </footer>
+        <script>
+            function openTool() {
+                var filePath = "ot.html";
+                window.open(filePath);
+            }
+            </script>
 </body>
 </html>
