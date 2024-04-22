@@ -11,21 +11,31 @@
             margin: 0;
         }
         body{
-            background-color:rgb(224, 234, 244);
+            background-color: #04151F;
+            /* background-color: #171D1C; */
             overflow: hidden;
         }
-        div{
+        div.grid{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr;
+            margin:4% 12% 5% 12%;
+            /* margin: 40px 100px 30px 130px;  */
+            
+              
+        }
+        /* div{
             margin-left: 8%;
             width: max-content;
             margin-top: 40px;
             display: inline-block;
             
-        }
+        } */
         input{
             background-color: white;
             height: 30px;
-            width: 216px;
-            margin-right: 30px;
+            width: 200px;
+            margin-right: 27px;
             margin-top: 10px;
             border-collapse: collapse;
             border-radius: 5px;
@@ -36,7 +46,7 @@
             collapse:none;
         }
         input[type="email"]{
-            width: 350px;
+            width: 300px;
             margin: 30px 15px 30px 15px;
         }
         input:active,input:focus,textarea:focus{
@@ -61,7 +71,7 @@
             color: rgb(74, 72, 72);
         }
         button{
-            width: 93%;
+            width:86%;
             height: 35px;
             margin-top: 20px;
             font-size: 20px;
@@ -73,40 +83,79 @@
             background-color: white;
             font-size: 20px;
             color: black;
-            padding: 35px;
+            padding: 18px 40px 35px 35px;
+            width: max-content;
+            line-height:20px;
+            border-radius: 10px 0px 0px 10px;
+            box-shadow: 0px 0px 14px white;
             border: 1px solid black;
-            border-radius: 20px;
-            box-shadow: 0px 0px 4px black;
            
         }p{
             margin: 0;
             background-color: white;
             font-size:40px ;
             font-weight: 600;
-            
-            color: #5d56b1;;
+            padding: 20px 10px 10px 0px;
+            color: #5d56b1;
         }
-
         h2{
-            font-size: 40px;
+            color: white;
+            font-size: 30px;
+            /* animation-name: boom;
+            animation-iteration-count: 1;
+            animation-direction: normal;
+            transition: 1s ease-in-out all;
+            animation-duration:1.3s; */
+            
         }
         #msg{
-            background-color: white;
-            border-radius: 10px;
-            padding: 20px;
-            margin-left: 147px;
-            margin-top: 80px;
-            float: right;
-            border: 1.5px solid black;
+            background-color:#5d56b1 ;
+            border-radius: 0px 60px 60px 0px;
+            padding: 50px 30px 20px 30px;
+            box-shadow: 0px 0px 6px white;
+            border: 1px solid black;
+            border-width: 0.7px 0.7px 0.7px 0px;
+            width: max-content;
+            
+
         }
+        @keyframes boom {
+            from{
+            transform: translateX(600px);
+            opacity: 0;
+        }to{
+        transform: translateX(0px);
+        }}
         #sales{
             margin-left: 50px;
             margin-bottom: 20px;
+            margin-top: 6px;
+            mix-blend-mode:luminosity;
+            border-radius: 15px;
         }
     </style>
 </head>
 <body>
-    <div>
+    <div class="grid">
+        <div id="form"><form>
+            <p>Feedback📝</p>
+        <br>Name :<br>
+        <input type="text" placeholder="first name" />
+        <input type="text" placeholder="last name" /><br>
+        Email :<input type="email" placeholder="e-mail" required/><br>
+        Message:<br>
+        <textarea cols="45" rows="7" placeholder="how we can improve?"></textarea><br>
+       <button type="submit">Submit</button> 
+    </form>
+        </form></div>
+        <div id="msg"><img src="feedback.webp" width="350" height="280">
+            <h2><center>
+                Thank you for 
+                <br>connecting</center>
+            </h2>
+            <img id='sales' src="message.jpeg" width="250px"></div>
+    </div>
+    <!-- <div>
     <form method="post" type="submit"><p>Feedback📝</p>
         <br>Name :<br>
         <input type="text" placeholder="first name" />
@@ -123,6 +172,6 @@
             <br>visiting</center>
         </h2>
         <img id='sales' src="message.jpeg" width="250px">
-    </div>
+    </div> -->
 </body>
 </html>
