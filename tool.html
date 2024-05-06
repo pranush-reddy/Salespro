@@ -11,16 +11,28 @@
             font-family: sans-serif;
         }
         body{
-            background-image: linear-gradient(to top right,rgb(18, 4, 24),rgb(63, 9, 63));
+            /* background-image: linear-gradient(to top right,rgb(18, 4, 24),rgb(63, 9, 63));
             height: 100vh;
             overflow: hidden;
+            background-repeat: no-repeat; */
+        
+            background-image: url("back.jpg");
+            background-position: center;
             background-repeat: no-repeat;
+            background-size: cover; 
+            height: 90vh;
+            width: 90vw; 
+
+            
+
 
         }
         div{
             display: flex;
             justify-content: center;
+            margin-left: 10%;
             margin-top: 30px;
+            
 
         }
         form{
@@ -30,30 +42,40 @@
             border-radius: 15px ;
             line-height: 30px;
             background-color: white;
-            box-shadow: 0px 0px 10px white;
+            box-shadow: 0px 0px 15px black;
         }
         
         select , input{
             font-size: 18px;
             padding: 4px;
-            border: 1.4px solid black;
+            border: 1.6px solid black;
             border-radius: 5px;
             width: 220px;
+            
+        }
+        select{
+            height: 40px;
+        }
+        input{
+            height: 28px;
         }
         option{
             height: 45px;
+            font-size: 20px;
         }
         h1{
             text-align: center;
-            color: white;
+            color: black;
             font-size: 50px;
             margin-top: 30px;
+            margin-left: 80px;
+            font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
         }
         input[type=submit]{
             width: 390px;
             border-radius: 6px;
             height: 40px;
-            background-color: #11151C;
+            background-color:rgb(128, 94, 190);
             color: white;
             cursor: pointer;
         }
@@ -68,7 +90,7 @@
         
         <label for="item_type">Item Type:
             <select id="item_type" name="item_type" >
-                <option>Diary Prodcts</option>
+                <option>Diary Products</option>
                 <option>Soft Drinks</option>
                 <option>Fruits and Vegetables</option>
                 <option>Household</option>
@@ -81,7 +103,7 @@
             </select>
         </label><br><br>
         <label for="item_mrp">Item MRP:</label>
-        <input type="text" id="item_mrp" name="item_mrp" min="1" max=300><br><br>
+        <input type="number" id="item_mrp" name="item_mrp" min="1" max=300><br><br>
 
         <label for="outlet_identifier">Outlet Identifier:
             <select id="outlet_identifier" name="outlet_identifier">
